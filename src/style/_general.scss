@@ -1,0 +1,30 @@
+$lightGreen: #9CE8D9;
+$darkGreen: #62B7A6;
+$lightGray: #F9F9F9;
+$middleGray: #CCCCCC;
+$middleGray2: #808080;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Manrope', sans-serif;
+    scroll-behavior: smooth;
+}
+
+ul li, ol li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
