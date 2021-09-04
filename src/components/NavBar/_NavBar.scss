@@ -25,10 +25,12 @@
         color: $darkGreen;
       }
     }
+  }
 
-    .navbarContainer__menu--search {
+  .navbarContainer__buttons {
+    display: flex;
+    .navbarContainer__buttons--search {
       position: relative;
-      margin-left: 30px;
 
       .search__input {
         border: none;

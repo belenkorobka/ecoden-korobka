@@ -1,0 +1,36 @@
+.cartWidgetContainer {
+  position: relative;
+  cursor: pointer;
+  margin-left: 20px;
+
+  .cartWidgetContainer__cart {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: $darkGreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+      content: url('../../img/cart.svg');
+      position: relative;
+      top: 3px;
+    }
+  }
+
+  .cartWidgetContainer__counter {
+    position: absolute;
+    top: -4px;
+    right: -5px;
+    text-align: center;
+    color: $darkGreen;
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 13px;
+    padding-top: 1px;
+  }
+}
