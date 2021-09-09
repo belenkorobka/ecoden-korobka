@@ -1,0 +1,49 @@
+.itemCountContainer {
+    width: fit-content;
+    margin-top: 30px;
+    
+    .itemCountContainer__counter {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        
+        .itemCountContainer__counter--add {
+            &::after {
+                content: url('../../img/add.svg');
+            }
+
+            &:disabled {
+                opacity: 0.5;
+            }
+        }
+
+        .itemCountContainer__counter--subtract {
+            &::after {
+                content: url('../../img/subtract.svg');
+            }
+
+            &:disabled {
+                opacity: 0.5;
+            }
+        }
+
+        .itemCountContainer__counter--count {
+            color: $darkGray;
+            font-weight: 700;
+            font-size: 12px;
+            text-align: center;
+            width: 30px;
+            margin: 0 6px;
+        }
+    }
+    .itemCountContainer__addButton {
+        @extend .primaryButton;
+        margin-top: 8px;
+    }
+
+    p {
+        text-align: center;
+        margin-top: 20px;
+    }
+}

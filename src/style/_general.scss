@@ -3,6 +3,7 @@ $darkGreen: #62B7A6;
 $lightGray: #F9F9F9;
 $middleGray: #CCCCCC;
 $middleGray2: #808080;
+$darkGray: #1A1A1A;
 
 * {
     margin: 0;
@@ -27,4 +28,15 @@ button {
     border: none;
     background-color: transparent;
     cursor: pointer;
+}
+
+.primaryButton {
+    background-color: $lightGreen;
+    color: white;
+    padding: 14px;
+    border-radius: 20px;
+    width: 190px;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
 }
