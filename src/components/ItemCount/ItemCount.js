@@ -12,7 +12,8 @@ function ItemCount({ stock, initial}) {
     }
 
     function addToCart() { 
-        setMessage(`Agregaste ${count} unidades`)  	
+        setMessage(`Agregaste ${count} unidades`)
+        console.log(message)
     }
 
     return (
@@ -22,9 +23,7 @@ function ItemCount({ stock, initial}) {
                 <span className="itemCountContainer__counter--count">{count}</span>
                 <button className="itemCountContainer__counter--add" onClick={add}></button>
             </div>
-            <div></div>
             <button className="itemCountContainer__addButton" onClick={addToCart}>Añadir al carrito</button>
-            <p>{message}</p>
         </section>
     )
 }

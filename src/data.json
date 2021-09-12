@@ -1,0 +1,31 @@
+[{
+    "id": 1,
+    "line": "Anti Caries",
+    "title": "Kit ecológico",
+    "description": "Cepillo, pasta 90g, hilo 30m",
+    "price": 959,
+    "pictureUrl": "./img/kit1.png"
+},{
+    "id": 2,
+    "line": "Blanqueadora",
+    "title": "Kit ecológico",
+    "description": "Cepillo, pasta 90g, hilo 30m",
+    "price": 959,
+    "pictureUrl": "./img/kit2.png"
+},{
+    "id": 3,
+    "line": "Dientes sensibles",
+    "title": "Kit ecológico",
+    "description": "Cepillo, pasta 90g, hilo 30m",
+    "price": 959,
+    "pictureUrl": "./img/kit3.png"
+},
+{
+    "id": 4,
+    "line": "Ecokids",
+    "title": "Kit ecológico niños",
+    "description": "Cepillo, pasta 90g, hilo 30m",
+    "price": 959,
+    "pictureUrl": "./img/kit4.png"
+
+}]

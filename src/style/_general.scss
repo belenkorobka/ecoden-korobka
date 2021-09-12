@@ -1,6 +1,8 @@
+$softGreen: #E1FAEE;
 $lightGreen: #9CE8D9;
 $darkGreen: #62B7A6;
 $lightGray: #F9F9F9;
+$lightGray2: #F2F2F2;
 $middleGray: #CCCCCC;
 $middleGray2: #808080;
 $darkGray: #1A1A1A;
@@ -14,6 +16,10 @@ $darkGray: #1A1A1A;
 html {
     font-family: 'Manrope', sans-serif;
     scroll-behavior: smooth;
+}
+
+body {
+    background-color: $lightGray;
 }
 
 ul li, ol li {
