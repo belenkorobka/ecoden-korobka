@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react"
 import ItemList from "../ItemList/ItemList"
-import products from "../../data.json"
 
 function ItemListContainer(props) {
     const [items, setItems] = useState([])
 
     useEffect(() => {
-        getProducts().then((response) => setItems(response))
+        getProducts()
     },[])
 
     function getProducts() {
-        return new Promise((resolve) => {
-          setTimeout(() => resolve(products), 2000);
-        });
+        fetch("http://localhost:3001/products")
+            .then(response => response.json())
+            .then(response => setItems(response))
+            .catch(error => console.log(error))
     };
 
     return (

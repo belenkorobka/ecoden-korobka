@@ -1,0 +1,49 @@
+{
+    "products": [
+        {
+        "id": 1,
+        "line": "Anti Caries",
+        "title": "Kit ecológico",
+        "description": "Cepillo, pasta 90g, hilo 30m",
+        "detailDescription": "Conocé nuestro kit ecológico de higiene bucal elaborado a partir de bambú y producido de forma sustentable. El kit incluye un cepillo de dientes, una pasta dental y un hilo dental",
+        "products": ["Cepillo de dientes cerdas soft", "Pasta de dientes x 90g", "Hilo dental x 30m"],
+        "price": 959,
+        "pictureUrl": "./img/kit1.png",
+        "pictureDetailUrl": "./img/kit1_2.png",
+        "stock": 20
+    },{
+        "id": 2,
+        "line": "Blanqueadora",
+        "title": "Kit ecológico",
+        "description": "Cepillo, pasta 90g, hilo 30m",
+        "detailDescription": "Conocé nuestro kit ecológico de higiene bucal elaborado a partir de bambú y producido de forma sustentable. El kit incluye un cepillo de dientes, una pasta dental y un hilo dental",
+        "products": ["Cepillo de dientes cerdas soft", "Pasta de dientes x 90g", "Hilo dental x 30m"],
+        "price": 959,
+        "pictureUrl": "./img/kit2.png",
+        "pictureDetailUrl": "./img/kit2_2.png",
+        "stock": 20
+    },{
+        "id": 3,
+        "line": "Dientes sensibles",
+        "title": "Kit ecológico",
+        "description": "Cepillo, pasta 90g, hilo 30m",
+        "detailDescription": "Conocé nuestro kit ecológico de higiene bucal elaborado a partir de bambú y producido de forma sustentable. El kit incluye un cepillo de dientes, una pasta dental y un hilo dental",
+        "products": ["Cepillo de dientes cerdas soft", "Pasta de dientes x 90g", "Hilo dental x 30m"],
+        "price": 959,
+        "pictureUrl": "./img/kit3.png",
+        "pictureDetailUrl": "./img/kit3_2.png",
+        "stock": 20
+    },
+    {
+        "id": 4,
+        "line": "Ecokids",
+        "title": "Kit ecológico niños",
+        "description": "Cepillo, pasta 90g, hilo 30m",
+        "detailDescription": "Conocé nuestro kit ecológico de higiene bucal elaborado a partir de bambú y producido de forma sustentable. El kit incluye un cepillo de dientes, una pasta dental y un hilo dental",
+        "products": ["Cepillo de dientes cerdas soft", "Pasta de dientes x 90g", "Hilo dental x 30m"],
+        "price": 959,
+        "pictureUrl": "./img/kit4.png",
+        "pictureDetailUrl": "./img/kit4_2.png",
+        "stock": 20
+    }]
+}
