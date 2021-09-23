@@ -1,0 +1,17 @@
+.containerNotFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: calc(100vh - 114px);
+
+  .containerNotFound__error {
+    font-size: 200px;
+    color: $darkGreen;
+  }
+
+  .containerNotFound__message {
+    font-size: 30px;
+    color: $middleGray2;
+  }
+}

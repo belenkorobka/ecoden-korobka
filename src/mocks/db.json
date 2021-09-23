@@ -2,48 +2,362 @@
     "products": [
         {
         "id": 1,
-        "line": "Anti Caries",
+        "line": {
+            "id": 1,
+            "name": "Anti Caries"
+        },
         "title": "Kit ecológico",
         "description": "Cepillo, pasta 90g, hilo 30m",
         "detailDescription": "Conocé nuestro kit ecológico de higiene bucal elaborado a partir de bambú y producido de forma sustentable. El kit incluye un cepillo de dientes, una pasta dental y un hilo dental",
         "products": ["Cepillo de dientes cerdas soft", "Pasta de dientes x 90g", "Hilo dental x 30m"],
         "price": 959,
         "pictureUrl": "./img/kit1.png",
-        "pictureDetailUrl": "./img/kit1_2.png",
-        "stock": 20
+        "pictureDetailUrl": "../img/kit1_2.png",
+        "stock": 20,
+        "category": {
+            "id": 1,
+            "name": "kits"
+        }
     },{
         "id": 2,
-        "line": "Blanqueadora",
+        "line": {
+            "id": 2,
+            "name": "Blanqueadora"
+        },
         "title": "Kit ecológico",
         "description": "Cepillo, pasta 90g, hilo 30m",
         "detailDescription": "Conocé nuestro kit ecológico de higiene bucal elaborado a partir de bambú y producido de forma sustentable. El kit incluye un cepillo de dientes, una pasta dental y un hilo dental",
         "products": ["Cepillo de dientes cerdas soft", "Pasta de dientes x 90g", "Hilo dental x 30m"],
         "price": 959,
         "pictureUrl": "./img/kit2.png",
-        "pictureDetailUrl": "./img/kit2_2.png",
-        "stock": 20
+        "pictureDetailUrl": "../img/kit2_2.png",
+        "stock": 20,
+        "category": {
+            "id": 1,
+            "name": "kits"
+        }
     },{
         "id": 3,
-        "line": "Dientes sensibles",
+        "line": {
+            "id": 3,
+            "name": "Dientes sensibles"
+        },
         "title": "Kit ecológico",
         "description": "Cepillo, pasta 90g, hilo 30m",
         "detailDescription": "Conocé nuestro kit ecológico de higiene bucal elaborado a partir de bambú y producido de forma sustentable. El kit incluye un cepillo de dientes, una pasta dental y un hilo dental",
         "products": ["Cepillo de dientes cerdas soft", "Pasta de dientes x 90g", "Hilo dental x 30m"],
         "price": 959,
         "pictureUrl": "./img/kit3.png",
-        "pictureDetailUrl": "./img/kit3_2.png",
-        "stock": 20
+        "pictureDetailUrl": "../img/kit3_2.png",
+        "stock": 20,
+        "category": {
+            "id": 1,
+            "name": "kits"
+        }
     },
     {
         "id": 4,
-        "line": "Ecokids",
+        "line": {
+            "id": 4,
+            "name": "Ecokids"
+        },
         "title": "Kit ecológico niños",
         "description": "Cepillo, pasta 90g, hilo 30m",
         "detailDescription": "Conocé nuestro kit ecológico de higiene bucal elaborado a partir de bambú y producido de forma sustentable. El kit incluye un cepillo de dientes, una pasta dental y un hilo dental",
         "products": ["Cepillo de dientes cerdas soft", "Pasta de dientes x 90g", "Hilo dental x 30m"],
         "price": 959,
         "pictureUrl": "./img/kit4.png",
-        "pictureDetailUrl": "./img/kit4_2.png",
-        "stock": 20
-    }]
+        "pictureDetailUrl": "../img/kit4_2.png",
+        "stock": 20,
+        "category": {
+            "id": 1,
+            "name": "kits"
+        }
+    },
+    {
+        "id": 5,
+        "line": {
+            "id": 1,
+            "name": "Anti Caries"
+        },
+        "title": "Cepillo de dientes",
+        "description": "100% de bambú",
+        "detailDescription": "Tanto su mango como sus cerdas estas fabricados 100% con fibras de bambú. Su cerdas soft ofrecen una limpieza profunda y delicada",
+        "products": ["Cepillo de dientes cerdas soft"],
+        "price": 249,
+        "pictureUrl": "./img/cepillo1.png",
+        "pictureDetailUrl": "../img/cepillo1.png",
+        "stock": 20,
+        "category": {
+            "id": 2,
+            "name": "cepillos de dientes"
+        }
+    },
+    {
+        "id": 6,
+        "line": {
+            "id": 2,
+            "name": "Blanqueadora"
+        },
+        "title": "Cepillo de dientes",
+        "description": "100% de bambú",
+        "detailDescription": "Tanto su mango como sus cerdas estas fabricados 100% con fibras de bambú. Su cerdas soft ofrecen una limpieza profunda y delicada",
+        "products": ["Cepillo de dientes cerdas soft"],
+        "price": 249,
+        "pictureUrl": "./img/cepillo2.png",
+        "pictureDetailUrl": "../img/cepillo2.png",
+        "stock": 20,
+        "category": {
+            "id": 2,
+            "name": "cepillos de dientes"
+        }
+    },
+    {
+        "id": 7,
+        "line": {
+            "id": 3,
+            "name": "Dientes sensibles"
+        },
+        "title": "Cepillo de dientes",
+        "description": "100% de bambú",
+        "detailDescription": "Tanto su mango como sus cerdas estas fabricados 100% con fibras de bambú. Su cerdas soft ofrecen una limpieza profunda y delicada",
+        "products": ["Cepillo de dientes cerdas soft"],
+        "price": 249,
+        "pictureUrl": "./img/cepillo3.png",
+        "pictureDetailUrl": "../img/cepillo3.png",
+        "stock": 20,
+        "category": {
+            "id": 2,
+            "name": "cepillos de dientes"
+        }
+    },
+    {
+        "id": 8,
+        "line": {
+            "id": 4,
+            "name": "Ecokids"
+        },
+        "title": "Cepillo de dientes",
+        "description": "100% de bambú",
+        "detailDescription": "Tanto su mango como sus cerdas estas fabricados 100% con fibras de bambú. Su cerdas soft ofrecen una limpieza profunda y delicada",
+        "products": ["Cepillo de dientes cerdas soft"],
+        "price": 249,
+        "pictureUrl": "./img/cepillo4.png",
+        "pictureDetailUrl": "../img/cepillo4.png",
+        "stock": 20,
+        "category": {
+            "id": 2,
+            "name": "cepillos de dientes"
+        }
+    },
+    {
+        "id": 9,
+        "line": {
+            "id": 1,
+            "name": "Anti Caries"
+        },
+        "title": "Pasta de dientes",
+        "description": "Tubo reciclable por 90g",
+        "detailDescription": "Pasta elaborada con ingredientes orgánicos y naturales",
+        "products": ["Pasta de dientes x 90g"],
+        "price": 330,
+        "pictureUrl": "./img/pasta1.png",
+        "pictureDetailUrl": "../img/pasta1.png",
+        "stock": 20,
+        "category": {
+            "id": 3,
+            "name": "pastas de dientes"
+        }
+    },
+    {
+        "id": 10,
+        "line": {
+            "id": 2,
+            "name": "Blanqueadora"
+        },
+        "title": "Pasta de dientes",
+        "description": "Tubo reciclable por 90g",
+        "detailDescription": "Pasta elaborada con ingredientes orgánicos y naturales",
+        "products": ["Pasta de dientes x 90g"],
+        "price": 330,
+        "pictureUrl": "./img/pasta2.png",
+        "pictureDetailUrl": "../img/pasta2.png",
+        "stock": 20,
+        "category": {
+            "id": 3,
+            "name": "pastas de dientes"
+        }
+    },
+    {
+        "id": 11,
+        "line": {
+            "id": 3,
+            "name": "Dientes sensibles"
+        },
+        "title": "Pasta de dientes",
+        "description": "Tubo reciclable por 90g",
+        "detailDescription": "Pasta elaborada con ingredientes orgánicos y naturales",
+        "products": ["Pasta de dientes x 90g"],
+        "price": 330,
+        "pictureUrl": "./img/pasta3.png",
+        "pictureDetailUrl": "../img/pasta3.png",
+        "stock": 20,
+        "category": {
+            "id": 3,
+            "name": "pastas de dientes"
+        }
+    },
+    {
+        "id": 12,
+        "line": {
+            "id": 4,
+            "name": "Ecokids"
+        },
+        "title": "Pasta de dientes",
+        "description": "Tubo reciclable por 90g",
+        "detailDescription": "Pasta elaborada con ingredientes orgánicos y naturales",
+        "products": ["Pasta de dientes x 90g"],
+        "price": 330,
+        "pictureUrl": "./img/pasta4.png",
+        "pictureDetailUrl": "../img/pasta4.png",
+        "stock": 20,
+        "category": {
+            "id": 3,
+            "name": "pastas de dientes"
+        }
+    },
+    {
+        "id": 13,
+        "line": {
+            "id": 1,
+            "name": "Anti Caries"
+        },
+        "title": "Hilo dental",
+        "description": "Rollo x 30m",
+        "detailDescription": "Hilo dental fabricado con fibras de bambú",
+        "products": ["Hilo dental x 30m"],
+        "price": 210,
+        "pictureUrl": "./img/hilo1.png",
+        "pictureDetailUrl": "../img/hilo1.png",
+        "stock": 20,
+        "category": {
+            "id": 4,
+            "name": "hilos dentales"
+        }
+    },
+    {
+        "id": 14,
+        "line": {
+            "id": 2,
+            "name": "Blanqueadora"
+        },
+        "title": "Hilo dental",
+        "description": "Rollo x 30m",
+        "detailDescription": "Hilo dental fabricado con fibras de bambú",
+        "products": ["Hilo dental x 30m"],
+        "price": 210,
+        "pictureUrl": "./img/hilo2.png",
+        "pictureDetailUrl": "../img/hilo2.png",
+        "stock": 20,
+        "category": {
+            "id": 4,
+            "name": "hilos dentales"
+        }
+    },
+    {
+        "id": 15,
+        "line": {
+            "id": 3,
+            "name": "Dientes sensibles"
+        },
+        "title": "Hilo dental",
+        "description": "Rollo x 30m",
+        "detailDescription": "Hilo dental fabricado con fibras de bambú",
+        "products": ["Hilo dental x 30m"],
+        "price": 210,
+        "pictureUrl": "./img/hilo3.png",
+        "pictureDetailUrl": "../img/hilo3.png",
+        "stock": 20,
+        "category": {
+            "id": 4,
+            "name": "hilos dentales"
+        }
+    },
+    {
+        "id": 16,
+        "line": {
+            "id": 4,
+            "name": "Ecokids"
+        },
+        "title": "Hilo dental",
+        "description": "Rollo x 30m",
+        "detailDescription": "Hilo dental fabricado con fibras de bambú",
+        "products": ["Hilo dental x 30m"],
+        "price": 210,
+        "pictureUrl": "./img/hilo4.png",
+        "pictureDetailUrl": "../img/hilo4.png",
+        "stock": 20,
+        "category": {
+            "id": 4,
+            "name": "hilos dentales"
+        }
+    },
+    {
+        "id": 17,
+        "line": {
+            "id": 1,
+            "name": "Anti Caries"
+        },
+        "title": "Portacepillos",
+        "description": "Para 4 cepillos",
+        "detailDescription": "Portacepillos fabricado de madera de bambú y resistente al agua con espacio para cepillos.",
+        "products": ["Portacepillos"],
+        "price": 520,
+        "pictureUrl": "./img/portacepillo.png",
+        "pictureDetailUrl": "../img/portacepillo.png",
+        "stock": 20,
+        "category": {
+            "id": 5,
+            "name": "Accesorios"
+        }
+    },
+    {
+        "id": 18,
+        "line": {
+            "id": 1,
+            "name": "Anti Caries"
+        },
+        "title": "Neceser",
+        "description": "Tela de lino",
+        "detailDescription": "Neceser de tela de lino para llevar tu kit Ecodén a todos lados",
+        "products": ["Neceser"],
+        "price": 520,
+        "pictureUrl": "./img/neceser.png",
+        "pictureDetailUrl": "../img/neceser.png",
+        "stock": 20,
+        "category": {
+            "id": 5,
+            "name": "Accesorios"
+        }
+    },
+    {
+        "id": 19,
+        "line": {
+            "id": 1,
+            "name": "Anti Caries"
+        },
+        "title": "Ecobolsa",
+        "description": "Tela de lino",
+        "detailDescription": "Ecobolsa de tela de lino para llevar tu kit Ecodén a todos lados",
+        "products": ["Ecobolsa"],
+        "price": 520,
+        "pictureUrl": "./img/ecobolsa.png",
+        "pictureDetailUrl": "../img/ecobolsa.png",
+        "stock": 20,
+        "category": {
+            "id": 5,
+            "name": "Accesorios"
+        }
+    }
+]
 }

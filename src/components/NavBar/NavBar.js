@@ -1,12 +1,22 @@
+import { Link } from 'react-router-dom'
 import logo from '../../img/logo.svg'
 import CartWidget from '../CartWidget/CartWidget'
 
 function NavBar() {
   return (
     <nav className="navbarContainer">
-        <img src={logo} alt="logo" className="navbarContainer__logo"/>
+        <Link to="/"><img src={logo} alt="logo" className="navbarContainer__logo"/></Link>
         <ul className="navbarContainer__menu">
-          <li className="navbarContainer__menu--item"><a href="index.html">productos</a></li>
+          <li className="navbarContainer__menu--item">
+            <Link to="/">productos</Link>
+            <ul className="submenu">
+              <li className="submenu__item"><Link to="/category/1">Kits ecológicos</Link></li>
+              <li className="submenu__item"><Link to="/category/2">Cepillos de dientes</Link></li>
+              <li className="submenu__item"><Link to="/category/3">Pastas de dientes</Link></li>
+              <li className="submenu__item"><Link to="/category/4">Hilos dentales</Link></li>
+              <li className="submenu__item"><Link to="/category/5">Accesorios</Link></li>
+            </ul>
+          </li>
           <li className="navbarContainer__menu--item"><a href="index.html">wishlist</a></li>
           <li className="navbarContainer__menu--item"><a href="index.html">contacto</a></li>
         </ul>

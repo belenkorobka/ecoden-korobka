@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom"
 import ItemCount from "../ItemCount/ItemCount"
 
 function Item (props) {
   return (
-    <section className="itemContainer">
+    <Link className="itemContainer" to={`/product/${props.id}`}>
       <div className="itemContainer__header">
         <img className="itemContainer__header--image" src={props.pictureUrl} alt="imagen producto"/>
       </div>
@@ -15,14 +16,9 @@ function Item (props) {
           <div className="description">{props.description}</div>
           <div className="price">${props.price}</div>
         </div>
-        {/* <div className="itemContainer__body--data">
-          <div className="description"></div>
-          <div className="price"></div>
-        </div> */}
-        <ItemCount stock={12} initial={1} />
-
+        <ItemCount stock={props.stock} initial={1} />
       </div>
-    </section>
+    </Link>
   )
 }
 

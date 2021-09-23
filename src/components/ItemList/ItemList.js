@@ -1,7 +1,6 @@
 import Item from "../Item/Item"
 
-function ItemList({ items }) {
-  console.log(items)
+function ItemList({ items, isCategoryPage }) {
   return (
     <div className="itemList">
       {items?.map((item) => {
@@ -9,10 +8,11 @@ function ItemList({ items }) {
           <Item
             key={item.id}
             title={item.title}
-            line={item.line}
+            line={item.line.name}
             description={item.description}
 						price={item.price}
-            pictureUrl={item.pictureUrl}
+            pictureUrl={isCategoryPage ? `.${item.pictureUrl}` : item.pictureUrl}
+            id={item.id}
           />
         )
       })}

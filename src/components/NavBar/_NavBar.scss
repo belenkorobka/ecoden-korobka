@@ -19,10 +19,41 @@
 
     .navbarContainer__menu--item {
       font-size: 18px;
-      margin: 0 15px;
+      // margin: 30px 15px;
+      padding: 30px 15px;
+      position: relative;
       
       &>a {
         color: $darkGreen;
+      }
+
+      &:first-child:hover > .submenu {
+        display: block;
+      }
+
+      .submenu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        background-color: white;
+        padding: 15px 0;
+        border-radius: 12px;
+        width: 200px;
+        box-shadow: 1px 0px 40px -5px rgba(0,0,0,0.14);
+
+        .submenu__item {
+          font-size: 14px;
+          
+          &:hover {
+            background-color: $lightGray;
+          }
+
+          a {
+            padding: 5px 25px;
+            display: block;
+            color: $middleGray2;
+          }
+        }
       }
     }
   }
