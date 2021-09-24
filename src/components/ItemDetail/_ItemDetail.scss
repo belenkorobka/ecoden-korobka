@@ -56,5 +56,22 @@
                 margin-left: 20px;
             }
         }
+    
+        .itemDetail__productAdded {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+            height: fit-content;
+            .itemDetail__productAdded--quantity {
+                font-size: 11px;
+                width: 98px;
+                margin-right: 20px;
+            }
+
+            .itemDetail__productAdded--goToCart {
+                @extend .primaryButton;
+                background-color: $darkGray;
+            }
+        }
     }
 }

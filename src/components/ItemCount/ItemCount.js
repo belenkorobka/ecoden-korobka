@@ -1,8 +1,7 @@
 import { useState } from "react"
 
-function ItemCount({ stock, initial}) {
+function ItemCount({ stock, initial, onAdd}) {
   const [count, setCount] = useState(initial)
-  const [message, setMessage] = useState('')
 
   /**
    * @description Increments count state by 1
@@ -18,14 +17,6 @@ function ItemCount({ stock, initial}) {
       if (count > initial) setCount((prevState) => prevState - 1);
   }
 
-  /**
-   * @description Action to execute when user clicks on add to cart button
-   */
-  function addToCart() { 
-      setMessage(`Agregaste ${count} unidades`)
-      console.log(message)
-  }
-
   return (
     <section className="itemCountContainer">
       <div className="itemCountContainer__counter">
@@ -33,7 +24,7 @@ function ItemCount({ stock, initial}) {
         <span className="itemCountContainer__counter--count">{count}</span>
         <button className="itemCountContainer__counter--add" onClick={add}></button>
       </div>
-      <button className="itemCountContainer__addButton" onClick={addToCart}>Añadir al carrito</button>
+      <button className="itemCountContainer__addButton" onClick={() => onAdd(count)}>Añadir al carrito</button>
     </section>
   )
 }
