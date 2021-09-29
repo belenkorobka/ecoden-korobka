@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
+import { useCart } from "../../context/CartContext"
 import ItemCount from "../ItemCount/ItemCount"
 
 function ItemDetail({item}) {
+  const { addProduct, isInCart} = useCart()
   const [loading, setLoading] = useState(false)
-  const [quantity, setQuantity] = useState(null)
   
   useEffect(() => {
     if(!item.id) setLoading(true)
@@ -15,8 +16,8 @@ function ItemDetail({item}) {
    * @description Gets quantity of products added by user
    * @param {Number} quantity 
    */
-  function onAdd(quantity) {
-    setQuantity(quantity)
+  function onAdd(e, quantity) {
+    addProduct(item, quantity)
   }
 
   if(loading) {
@@ -32,11 +33,10 @@ function ItemDetail({item}) {
           <h2 className="itemDetail__productData--title">{item.title}</h2>
           <p className="itemDetail__productData--description">{item.detailDescription}</p>
           <p className="itemDetail__productData--price">${item.price}</p>
-          {/* <ItemCount stock={item.stock} initial={1} onAdd={onAdd}/> */}
-          {!quantity && <ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>}
-          {quantity && 
+          {!isInCart(item.id) && <ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>}
+          {isInCart(item.id) && 
             <div className="itemDetail__productAdded">
-              <p className="itemDetail__productAdded--quantity">Agregaste {`${quantity} ${quantity > 1 ? 'unidades' : 'unidad'}`}</p>
+              <p className="itemDetail__productAdded--quantity">Producto añadido al carrito</p>
               <Link to='/cart'>
                 <button className="itemDetail__productAdded--goToCart">Ir al carrito</button>
               </Link>

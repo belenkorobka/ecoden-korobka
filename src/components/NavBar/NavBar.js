@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import logo from '../../img/logo.svg'
+import logo from '../../img/logo3.svg'
 import CartWidget from '../CartWidget/CartWidget'
 
 function NavBar() {
@@ -25,7 +25,7 @@ function NavBar() {
             <input type="text" className="search__input" placeholder="Buscar un producto"/>
             <button type="button" className="search__button"></button>
           </li>
-          <CartWidget count={0}/>
+          <CartWidget />
         </ul>
     </nav>
   );

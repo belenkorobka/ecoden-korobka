@@ -78,5 +78,27 @@
                 font-family: 'Comfortaa', sans-serif;
             }
         }
+
+        .itemContainer__productAdded {
+            display: flex;
+            align-items: center;
+            // margin-top: 15px;
+            height: fit-content;
+            flex-direction: column;
+
+            p{
+                text-align: center;
+            }
+            .itemContainer__productAdded--quantity {
+                font-size: 11px;
+                width: 98px;
+                margin-bottom: 10px;
+            }
+
+            .itemContainer__productAdded--goToCart {
+                @extend .primaryButton;
+                background-color: $darkGray;
+            }
+        }
     }
 }

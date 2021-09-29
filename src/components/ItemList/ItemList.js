@@ -13,6 +13,7 @@ function ItemList({ items, isCategoryPage }) {
 						price={item.price}
             pictureUrl={isCategoryPage ? `.${item.pictureUrl}` : item.pictureUrl}
             id={item.id}
+            stock={item.stock}
           />
         )
       })}

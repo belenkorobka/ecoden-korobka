@@ -33,4 +33,168 @@
     font-size: 13px;
     padding-top: 1px;
   }
+
+  .cartWidgetContainer__modal {
+    position: absolute;
+    width: 280px;
+    height: 395px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 1px 0px 40px -5px rgba(0,0,0,0.14);
+    right: 0;
+    top: 60px;
+    padding: 15px 10px 15px 15px;
+    z-index: 2;
+
+    &::after {
+      content: "";
+      width: 30px;
+      height: 30px;
+      background-color: white;
+      top: -5px;
+      right: 6px;
+      display: block;
+      position: absolute;
+      transform: rotate(45deg);
+      border-radius: 6px;
+    }
+
+    .cartWidgetContainer__modal--header{
+      font-size: 15px;
+      text-transform: uppercase;
+      color: $middleGray2;
+    }
+
+    .cartWidgetContainer__modal--cards {
+      height: 230px;
+      overflow-y: scroll;
+      padding: 5px;
+      margin-top: 10px;
+
+      .emptyCartLabel {
+        color: $middleGray;
+        text-align: center;
+        font-size: 14px;
+        margin-top: 100px;
+      }
+
+      .card {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 15px;
+        // margin-left: 5px;
+  
+        .card__imageContainer {
+          width: 100px;
+          height: 100px;
+          background-color: $lightGray;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+
+          .card__imageContainer--image {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+          }
+        }
+  
+        .card__dataContainer {
+          width: calc(100% - 100px);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          margin-left: 15px;
+          padding: 5px 0;
+          .card__dataContainer--primaryData {
+            .line {
+              font-family: 'Comfortaa', sans-serif;
+              font-size: 10px;
+              color: $lightGreen;
+              display: block;
+            }
+  
+            .title {
+              font-size: 14px;
+              color: $middleGray2;
+              display: block;
+              font-weight: 700;
+            }
+          }
+  
+          .card__dataContainer--secondaryData {
+            .quantity {
+              font-size: 12px;
+              color: $middleGray;
+            }
+            .price {
+              font-size: 15px;
+              font-weight: 500;
+              margin-left: 5px;
+              color: $middleGray2;
+            }
+          }
+  
+        }
+  
+        .card__removeButton {
+          position: absolute;
+          background-color: $darkGreen;
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+          left: -5px;
+          top: -5px;
+          color: white;
+
+          &::after {
+            content: url('../../img/remove.svg');
+            position: relative;
+            top: -1px;
+          }
+        }
+      }
+    }
+    
+    .cartWidgetContainer__modal--footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .footerContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 10px;
+
+        .footerContainer__label {
+          font-size: 15px;
+          text-transform: uppercase;
+          color: $middleGray2;
+          font-weight: 700;
+        }
+
+        .footerContainer__totalPrice {
+          font-size: 25px;
+        }
+      }
+      .goToCart {
+        @extend .primaryButton;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      .emptyCartButton {
+        color: $middleGray;
+        text-align: center;
+        font-size: 13px;
+        margin-top: 5px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    
+  }
 }

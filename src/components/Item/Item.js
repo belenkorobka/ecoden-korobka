@@ -1,7 +1,26 @@
 import { Link } from "react-router-dom"
 import ItemCount from "../ItemCount/ItemCount"
+import { useCart } from "../../context/CartContext"
 
 function Item (props) {
+  const { addProduct, isInCart } = useCart()
+
+  /**
+   * @description Gets quantity of products added by user and calls addProduct method
+   * @param {Number} quantity 
+   */
+   function onAdd(e, quantity) {
+    e.preventDefault()
+    const item = {
+      id: props.id,
+      title: props.title,
+      line: {id: 0, name: props.line},
+      price: props.price,
+      pictureUrl: props.pictureUrl
+    }
+    addProduct(item, quantity)
+  }
+
   return (
     <Link className="itemContainer" to={`/product/${props.id}`}>
       <div className="itemContainer__header">
@@ -16,7 +35,13 @@ function Item (props) {
           <div className="description">{props.description}</div>
           <div className="price">${props.price}</div>
         </div>
-        <ItemCount stock={props.stock} initial={1} />
+        {!isInCart(props.id) && <ItemCount stock={props.stock} initial={1} onAdd={onAdd}/>}
+        {isInCart(props.id) && 
+          <div className="itemContainer__productAdded">
+            <p className="itemContainer__productAdded--quantity">Producto añadido al carrito</p>
+            <button className="itemContainer__productAdded--goToCart">Ir al carrito</button>
+          </div>
+        }
       </div>
     </Link>
   )
