@@ -18,8 +18,7 @@ function CartWidget(props) {
   return (
     <li className="cartWidgetContainer">
       <button className="cartWidgetContainer__cart" onClick={handleClick}></button>
-      {/* <Link to="/cart" className="cartWidgetContainer__cart"></Link> */}
-      <span className="cartWidgetContainer__counter">{cartCount}</span>
+      {cartProducts.length > 0 && <span className="cartWidgetContainer__counter">{cartCount}</span>}
       {isCartOpen && 
         <ClickAwayListener onClickAway={handleClickAway}>
           <section className="cartWidgetContainer__modal">
