@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams, Redirect } from "react-router"
+import { getFirestore } from "../../firebase"
 import ItemList from "../../components/ItemList/ItemList"
 
 function ItemListContainer(props) {
@@ -11,10 +12,11 @@ function ItemListContainer(props) {
 
   useEffect(() => {
     setIsCategoryPage(id ? true : false)
+    const db = getFirestore()
+    const productsCollection = db.collection("products")
 
-    fetch("http://localhost:3001/products")
-      .then(response => response.json())
-      .then(response => filterItems(response))
+    productsCollection.get()
+      .then(querySnapshot => filterItems(querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))))
       .catch(error => setNotFound(true))
     
     

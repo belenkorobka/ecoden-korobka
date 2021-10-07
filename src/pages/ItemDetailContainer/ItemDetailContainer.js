@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams, Redirect } from "react-router"
+import { getFirestore } from "../../firebase";
 import ItemDetail from "../../components/ItemDetail/ItemDetail"
 
 function ItemDetailContainer(props) {
@@ -8,14 +9,18 @@ function ItemDetailContainer(props) {
   const [notFound, setNotFound] = useState(false)
 
   useEffect(() => {
-    fetch(`http://localhost:3001/products/${id}`)
-      .then(response => { 
-        if (!response.ok) {
+    const db = getFirestore()
+    const productsCollection = db.collection("products");
+    const product = productsCollection.doc(id);
+
+    product.get()
+      .then((doc) => {
+        if (!doc.exists) {
           throw Error
+        } else {
+          setProduct({ id: doc.id, ...doc.data() });
         }
-        return response.json()
       })
-      .then(response => setProduct(response))
       .catch(error => setNotFound(true))
   },[id])
 
