@@ -1,0 +1,21 @@
+.checkoutContainer {
+  margin: 170px 60px 50px 60px;
+
+  .checkoutContainer__form {
+    .checkoutContainer__form--input {
+      margin-top: 15px;
+      input {
+        padding: 10px;
+        border-radius: 20px;
+        border: 1px solid $lightGreen;
+        display: block;
+        margin-top: 7px;
+        width: 300px;
+      }
+    }
+    .checkoutContainer__form--button {
+      margin-top: 25px;
+      @extend .primaryButton;
+    }
+  }
+}

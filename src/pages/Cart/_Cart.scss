@@ -131,6 +131,7 @@
 
     .cartContainer__footer--buy {
       @extend .primaryButton;
+      text-align: center;
     }
 
     .emptyCartButton {

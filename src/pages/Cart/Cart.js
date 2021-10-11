@@ -42,7 +42,7 @@ function Cart() {
             <span className="totalLabel">Total</span>
             <span className="totalPrice">${total}</span>
           </p>
-          <button className="cartContainer__footer--buy">Comprar</button>
+          <Link to="/checkout" className="cartContainer__footer--buy">Comprar</Link>
           {cartProducts.length >= 1 && <p className="emptyCartButton" onClick={clear}>Vaciar Carrito</p>}
         </div>
       </section>

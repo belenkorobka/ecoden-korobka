@@ -6,6 +6,7 @@ import NotFound from './pages/NotFound/NotFound'
 import Cart from './pages/Cart/Cart'
 import './style/main.scss'
 import { CartProvider } from "./context/CartContext"
+import Checkout from "./pages/Checkout/Checkout"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route exact path="/category/:id" component={ItemListContainer} />
           <Route exact path="/product/:id" component={ItemDetailContainer} />
           <Route exact path="/cart" component={Cart} />
+          <Route exact path="/checkout" component={Checkout} />
           <Route exact path="/notFound" component={NotFound} />
           <Route path="*">
             <Redirect from="*" to="/notFound" />

@@ -13,25 +13,17 @@ function ItemListContainer(props) {
   useEffect(() => {
     setIsCategoryPage(id ? true : false)
     const db = getFirestore()
-    const productsCollection = db.collection("products")
+    let productsCollection
+
+    if (id) {
+      productsCollection = db.collection("products").where('category.id', '==', parseInt(id))
+    } else {
+      productsCollection = db.collection("products")
+    }
 
     productsCollection.get()
-      .then(querySnapshot => filterItems(querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))))
-      .catch(error => setNotFound(true))
-    
-    
-    /**
-     * @description Sets and filters items value according to page route
-     * @param {Array} response - Original array of products 
-     */
-    function filterItems(response) {
-      if (id) {
-        const filteredItems = response.filter(item => item.category.id === parseInt(id))
-        if (!filteredItems.length) throw Error
-        setItems(filteredItems)
-      }
-      else setItems(response)
-    }
+    .then(querySnapshot => setItems(querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))))
+    .catch(error => setNotFound(true))
 
     /**
      * @description Sets the page title according to the page route
