@@ -16,13 +16,7 @@ Instalar todas las dependencias del proyecto con npm
 npm install
 ```
 
-### 3. Iniciar servidor
-Iniciar json-server ejecutando el siguiente comando
-```
-npm run json-server
-```
-
-### 4. Iniciar aplicación
+### 3. Iniciar aplicación
 Iniciar la aplicación ejecutando el siguiente comando
 ```
 npm start

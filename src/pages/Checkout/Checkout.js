@@ -7,34 +7,64 @@ function Checkout() {
   const [orderMade, setOrderMade] = useState(false)
   const [orderData, setOrderData] = useState({})
   const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState(false) 
 
   function handleSubmit (e) {
     e.preventDefault()
-    setIsLoading(true)
 
-    const items = cartProducts.map(item => {
-      return {
-        id: item.id,
-        title: item.title,
-        quantity: item.quantity,
-        price: item.price
+    if(e.target[2].value !== e.target[3].value) {
+      setError(true)
+    } else {
+      setIsLoading(true)
+      
+      const items = cartProducts.map(item => {
+        return {
+          id: item.id,
+          title: item.title,
+          quantity: item.quantity,
+          price: item.price
+        }
+      })
+  
+      const newOrder = {
+        buyer: {name: e.target[0].value, phone: e.target[1].value, email: e.target[2].value},
+        items,
+        total,
+        date: new Date()
       }
-    })
+  
+      const db = getFirestore()
+      const ordersCollection = db.collection("orders")
+  
+      ordersCollection
+        .add(newOrder)
+        .then((docRef) => purchaseData(docRef))
+        .catch((error) => console.log(error))
+    } 
 
-    const newOrder = {
-      buyer: {name: e.target[0].value, phone: e.target[1].value, email: e.target[2].value},
-      items,
-      total,
-      date: new Date()
-    }
+    // const items = cartProducts.map(item => {
+    //   return {
+    //     id: item.id,
+    //     title: item.title,
+    //     quantity: item.quantity,
+    //     price: item.price
+    //   }
+    // })
 
-    const db = getFirestore()
-    const ordersCollection = db.collection("orders")
+    // const newOrder = {
+    //   buyer: {name: e.target[0].value, phone: e.target[1].value, email: e.target[2].value},
+    //   items,
+    //   total,
+    //   date: new Date()
+    // }
 
-    ordersCollection
-      .add(newOrder)
-      .then((docRef) => purchaseData(docRef))
-      .catch((error) => console.log(error))
+    // const db = getFirestore()
+    // const ordersCollection = db.collection("orders")
+
+    // ordersCollection
+    //   .add(newOrder)
+    //   .then((docRef) => purchaseData(docRef))
+    //   .catch((error) => console.log(error))
   }
 
   function purchaseData (data) {
@@ -67,6 +97,11 @@ function Checkout() {
             <label htmlFor="email">Email</label>
             <input type="email" id="email" name="email" required/>
           </div>
+          <div className="checkoutContainer__form--input">
+            <label htmlFor="emailRepeat">Repetir Email</label>
+            <input type="email" id="repeatEmail" name="repeatEmail" required/>
+          </div>
+          {error && <p>Los emails no coinciden</p>}
           <button type="submit" className="checkoutContainer__form--button">{!isLoading ? 'Finalizar compra' : 'Cargando...'}</button>
         </form>
       </section>
