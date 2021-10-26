@@ -16,7 +16,7 @@ function Checkout() {
       setError(true)
     } else {
       setIsLoading(true)
-      
+
       const items = cartProducts.map(item => {
         return {
           id: item.id,
@@ -41,30 +41,6 @@ function Checkout() {
         .then((docRef) => purchaseData(docRef))
         .catch((error) => console.log(error))
     } 
-
-    // const items = cartProducts.map(item => {
-    //   return {
-    //     id: item.id,
-    //     title: item.title,
-    //     quantity: item.quantity,
-    //     price: item.price
-    //   }
-    // })
-
-    // const newOrder = {
-    //   buyer: {name: e.target[0].value, phone: e.target[1].value, email: e.target[2].value},
-    //   items,
-    //   total,
-    //   date: new Date()
-    // }
-
-    // const db = getFirestore()
-    // const ordersCollection = db.collection("orders")
-
-    // ordersCollection
-    //   .add(newOrder)
-    //   .then((docRef) => purchaseData(docRef))
-    //   .catch((error) => console.log(error))
   }
 
   function purchaseData (data) {
