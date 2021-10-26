@@ -17,8 +17,6 @@ function NavBar() {
               <li className="submenu__item"><Link to="/category/5">Accesorios</Link></li>
             </ul>
           </li>
-          <li className="navbarContainer__menu--item"><a href="index.html">wishlist</a></li>
-          <li className="navbarContainer__menu--item"><a href="index.html">contacto</a></li>
         </ul>
         <ul className="navbarContainer__buttons">
           <li className="navbarContainer__buttons--search">
